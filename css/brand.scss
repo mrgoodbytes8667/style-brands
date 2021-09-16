@@ -15,3 +15,11 @@
   @include text($textColor);
   background-color: darken($bgColor, $darkenPercent);
 }
+
+@mixin link($textColor) {
+  @include text($textColor);
+}
+
+@mixin link-hover($textColor, $darkenPercent: 5%) {
+  color: darken($textColor, $darkenPercent);
+}

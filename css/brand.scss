@@ -1,0 +1,17 @@
+@mixin bg($bgColor) {
+  background-color: $bgColor;
+}
+
+@mixin text($textColor) {
+  color: $textColor;
+}
+
+@mixin btn($bgColor, $textColor) {
+  @include text($textColor);
+  @include bg($bgColor);
+}
+
+@mixin btn-hover($bgColor, $textColor, $darkenPercent: 5%) {
+  @include text($textColor);
+  background-color: darken($bgColor, $darkenPercent);
+}

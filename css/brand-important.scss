@@ -1,0 +1,33 @@
+@mixin bg-important($bgColor) {
+  background-color: $bgColor !important;
+}
+
+@mixin bg-darken-important($bgColor, $darkenPercent: 5%) {
+  background-color: darken($bgColor, $darkenPercent) !important;
+}
+
+@mixin text-important($textColor) {
+  color: $textColor !important;
+}
+
+@mixin text-darken-important($textColor, $darkenPercent: 5%) {
+  color: darken($textColor, $darkenPercent) !important;
+}
+
+@mixin btn-important($bgColor, $textColor) {
+  @include text-important($textColor);
+  @include bg-important($bgColor);
+}
+
+@mixin btn-hover-important($bgColor, $textColor, $darkenPercent: 5%) {
+  @include text-important($textColor);
+  @include bg-darken-important($bgColor, $darkenPercent);
+}
+
+@mixin link-important($textColor) {
+  @include text-important($textColor);
+}
+
+@mixin link-hover-important($textColor, $darkenPercent: 5%) {
+  @include text-darken-important($textColor, $darkenPercent);
+}

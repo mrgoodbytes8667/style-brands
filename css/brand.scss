@@ -2,8 +2,16 @@
   background-color: $bgColor;
 }
 
+@mixin bg-darken($bgColor, $darkenPercent: 5%) {
+  background-color: darken($bgColor, $darkenPercent);
+}
+
 @mixin text($textColor) {
   color: $textColor;
+}
+
+@mixin text-darken($textColor, $darkenPercent: 5%) {
+  color: darken($textColor, $darkenPercent);
 }
 
 @mixin btn($bgColor, $textColor) {
@@ -13,7 +21,7 @@
 
 @mixin btn-hover($bgColor, $textColor, $darkenPercent: 5%) {
   @include text($textColor);
-  background-color: darken($bgColor, $darkenPercent);
+  @include bg-darken($bgColor, $darkenPercent);
 }
 
 @mixin link($textColor) {
@@ -21,5 +29,5 @@
 }
 
 @mixin link-hover($textColor, $darkenPercent: 5%) {
-  color: darken($textColor, $darkenPercent);
+  @include text-darken($textColor, $darkenPercent);
 }

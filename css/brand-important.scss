@@ -31,3 +31,17 @@
 @mixin link-hover-important($textColor, $darkenPercent: 5%) {
   @include text-darken-important($textColor, $darkenPercent);
 }
+
+@mixin alert-variant-important($background, $border, $color) {
+  --#{$prefix}alert-color: #{$color} !important;
+  --#{$prefix}alert-bg: #{$background} !important;
+  --#{$prefix}alert-border-color: #{$border} !important;
+
+  @if $enable-gradients {
+    background-image: var(--#{$prefix}gradient) !important;
+  }
+
+  .alert-link {
+    color: shade-color($color, 20%) !important;
+  }
+}

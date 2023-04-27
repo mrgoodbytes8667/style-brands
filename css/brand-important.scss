@@ -45,3 +45,7 @@
     color: shade-color($color, 20%) !important;
   }
 }
+
+@mixin border-important($bgColor, $darkenPercent: 0%) {
+  border: var(--bs-border-width) var(--bs-border-style) $bgColor !important;
+}

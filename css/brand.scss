@@ -31,3 +31,7 @@
 @mixin link-hover($textColor, $darkenPercent: 5%) {
   @include text-darken($textColor, $darkenPercent);
 }
+
+@mixin border($bgColor, $darkenPercent: 0%) {
+  border: var(--bs-border-width) var(--bs-border-style) $bgColor !important;
+}

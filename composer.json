@@ -1,0 +1,16 @@
+{
+    "name": "mrgoodbytes8667/style-brands",
+    "type": "symfony-bundle",
+    "license": "CC-BY-NC-4.0",
+    "description": "Symfony bundle that simply wraps in CSS styles",
+    "require": {
+        "php": "^8.1"
+    },
+    "authors": [
+        {
+            "name": "MrGoodBytes",
+            "email": "bytes@mrgoodbytes.dev"
+        }
+    ],
+    "minimum-stability": "dev"
+}
